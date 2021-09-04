@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  /* font-family: 'Inter', sans-serif; */
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  color: hsl(0, 0%, 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 128px auto 0;
+  padding: 0 24px;
+}
+/* CARD COMPONENT */
+.stats-preview-card {
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 11px;
+  overflow: hidden;
+  display: flex;
+}
+
+.stats-preview {
+  width: 50%;
+  padding: 36px 62px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.stats-preview span {
+  color: hsl(277, 64%, 61%);
+}
+
+.stats-preview-paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.stat-boxes {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.stat {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stat-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.image-container {
+  height: 446px;
+  width: 50%;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+      hsla(277, 64%, 61%, 0.35),
+      hsla(277, 64%, 61%, 0.35)
+    ),
+    url('./images/image-header-desktop.jpg');
+  filter: saturate(200%);
+}
+/* ****************************** */
+/* Media Query */
+@media (max-width: 900px) {
+  .container {
+    max-width: 385px;
+    padding: 0 10px;
+  }
+  .stats-preview-card {
+    max-width: 375px;
+    flex-direction: column;
+  }
+
+  .image-container {
+    order: -1;
+    width: 100%;
+    height: 309px;
+  }
+
+  .stats-preview {
+    width: 100%;
+    padding: 36px;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .h2 {
+    font-size: 30px;
+  }
+
+  .stat-boxes {
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+}
